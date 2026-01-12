@@ -1,0 +1,94 @@
+/* =============== Custom Cursor =============== */
+.customCursor {
+  clip-path: polygon(0 100%, 0 0, 77% 64%, 29% 62%);
+  transition: width 0.3s, height 0.3s;
+}
+
+@media (max-width: 450px) {
+  .customCursor {
+    display: none;
+  }
+}
+/* =============== Custom Cursor =============== */
+
+/* =============== fadeIn =============== */
+.fadeIn {
+  animation: fade var(--animation-duration) ease-in-out forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* =============== fadeIn =============== */
+
+/* =============== dotAvilability =============== */
+.dotAvilability {
+  animation: dot 1.5s linear infinite;
+}
+
+@keyframes dot {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+/* =============== dotAvilability =============== */
+
+/* =============== hexagon =============== */
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+/* =============== hexagon =============== */
+
+/* =============== Spinner & rotation =============== */
+.spinner {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* =============== Spinner & rotation =============== */
+
+/* =============== text gradient =============== */
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.textContent {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text-gradient linear infinite;
+}
+/* =============== text gradient =============== */
